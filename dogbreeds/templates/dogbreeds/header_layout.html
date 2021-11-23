@@ -1,0 +1,42 @@
+{% load static  %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Dog Breeds</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'dogbreeds/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'dogbreeds/css/noscript.css'%}" /></noscript>
+    <link rel="icon" href="{% static 'dogbreeds/images/dog.ico' %}">
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="{% url 'index' %}" class="logo">
+									<span class="symbol"><img src="{% static 'dogbreeds/images/doberman.ico' %}" alt="" /></span><span class="title">Dog Breeds</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="{% url 'index' %}">Home</a></li>
+							<li><a href="/admin">Admin Page</a></li>
+						</ul>
+					</nav>

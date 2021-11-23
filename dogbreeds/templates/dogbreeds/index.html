@@ -1,0 +1,52 @@
+{% extends "dogbreeds/base_layout.html" %}
+{% load static %}
+
+{% block title %}Dog Breeds{% endblock title %}
+
+{% block body %}
+
+
+<div id="main">
+      <div class="inner">
+        <header>
+          <h1> Dogs </h1>
+          <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+        </header>
+        <section class="tiles">
+          {% for dog in object_list %}
+              <article class="{% cycle 'style1' 'style2' 'style3' 'style4' 'style5' 'style6' %}">
+                <span class="image">
+                  <img src="{% static dog.get_small_image %}" alt="" />
+                </span>
+                <a href="{{ dog.get_absolute_url }}">
+                  <h2>{{ dog.name }}</h2>
+                  <div class="content">
+                    <p>Detaylı bilgileri görmek için tıklayın.</p>
+                  </div>
+                </a>
+              </article>
+
+          {% endfor %}
+
+
+
+
+        </section>
+      </div>
+    </div>
+    <div style="padding-left: 80px;">
+      <ul class="actions stacked">
+        <li><a href="?page={{ page_obj.next_page_number }}" class="button primary">Next</a></li>
+      </ul>
+
+    </div>
+
+    <!-- <ul>
+      {% for dog in doglist %}
+          <li>{{ dog.name }}</li>
+      {% endfor %}
+
+    </ul>
+ -->
+
+{% endblock body %}

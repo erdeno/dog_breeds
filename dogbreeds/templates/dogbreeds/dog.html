@@ -1,0 +1,18 @@
+{% extends "dogbreeds/base_layout.html" %}
+{% load static %}
+
+{% block title %} {{dog.name}} - Details {% endblock title %}
+
+
+{% block body %}
+
+<!-- Main -->
+  <div id="main">
+    <div class="inner">
+      <h1>{{ dog.name }}</h1>
+      <span style="align: center;" class="col-6"><img src="{% static dog.get_big_image %}" alt="" /></span>
+        {{dogDetails.html_content|safe}}
+    </div>
+  </div>
+
+{% endblock body %}
