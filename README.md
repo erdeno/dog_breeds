@@ -10,7 +10,7 @@ It's a database for dog breeds, 237 dog breeds in it.
 
 ---
 
-![Homepage 2](/images/doglist.png)
+![Homepage 2](/images/homepage2.png)
 
 ---
 ![Detail page](/images/dogdetails.png)
